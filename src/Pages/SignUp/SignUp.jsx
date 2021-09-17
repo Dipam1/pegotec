@@ -139,6 +139,7 @@ const SignUp = () => {
               onChange={(e) => {
                 if (e.target.value.length > 300) {
                   toast.error("No More Than 300 Characters!");
+                  toast.clearWaitingQueue();
                   return;
                 }
                 setFormData({ ...formData, about: e.target.value });
@@ -169,9 +170,14 @@ const SignUp = () => {
           <div className="dataInfo">
             {" "}
             Your Age:{" "}
-            {parseInt(calculateAge()) < 0 ? "Not Valid" : calculateAge() + " Years Old"} 
+            {parseInt(calculateAge()) < 0
+              ? "Not Valid"
+              : calculateAge() + " Years Old"}
           </div>
-          <div className="dataInfo"> About: {formData.about}</div>
+          <div className="dataInfo">
+            {" "}
+            About: <p>{formData.about}</p>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

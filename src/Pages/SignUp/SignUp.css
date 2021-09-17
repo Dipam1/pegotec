@@ -19,13 +19,14 @@
   color: var(--primary-color);
 }
 
-
-.signup-page-main .react-datepicker__input-container input{
-    padding-left: 0.5rem;
+.signup-page-main .react-datepicker__input-container input {
+  padding-left: 0.5rem;
 }
 
-.dataInfo{
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 10px;
+.dataInfo {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
