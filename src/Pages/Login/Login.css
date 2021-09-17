@@ -1,0 +1,20 @@
+.login-page-main .form-container {
+  margin: auto;
+  max-width: 500px;
+  min-width: 300px;
+  border-radius: 5px;
+  padding: 3rem;
+  border: 1px solid var(--primary-color);
+  background: rgb(166, 64, 39);
+  background: linear-gradient(
+    165deg,
+    rgba(166, 64, 39, 0.08451684091605393) 24%,
+    rgba(58, 139, 94, 0.0821078773306197) 76%
+  );
+}
+
+.login-page-main h2 {
+  text-align: center;
+  margin: 3rem 0;
+  color: var(--primary-color);
+}

@@ -1,0 +1,30 @@
+.login-signup-option {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 95vh;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-signup-option .option {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+  min-width: 300px;
+  max-width: 450px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.login-signup-option .option:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
