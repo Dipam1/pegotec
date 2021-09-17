@@ -30,6 +30,7 @@ const SignUp = () => {
 
   const formSubmit = (event) => {
     event.preventDefault();
+    toast.success("Signed Up!");
     handleShow();
   };
 
@@ -165,7 +166,11 @@ const SignUp = () => {
           <div className="dataInfo"> Address: {formData.address}</div>
           <div className="dataInfo"> Phone: {formData.phone}</div>
           <div className="dataInfo"> Country: {formData.country}</div>
-          <div className="dataInfo"> Your Age: {calculateAge()} Years Old</div>
+          <div className="dataInfo">
+            {" "}
+            Your Age:{" "}
+            {parseInt(calculateAge()) < 0 ? "Not Valid" : calculateAge() + " Years Old"} 
+          </div>
           <div className="dataInfo"> About: {formData.about}</div>
         </Modal.Body>
         <Modal.Footer>

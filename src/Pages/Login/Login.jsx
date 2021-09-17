@@ -1,12 +1,14 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import { useHistory } from "react-router";
 import { toast } from "react-toastify";
 import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
 
   const formSubmit = (event) => {
     event.preventDefault();
@@ -15,6 +17,7 @@ const Login = () => {
       .post("https://api.framework.pegotec.pro/api/auth/login", loginInfo)
       .then((response) => {
         toast.success("User Logged In!");
+        history.push("/");
       })
       .catch((err) => {
         toast.error("Login Unsuccessful");
